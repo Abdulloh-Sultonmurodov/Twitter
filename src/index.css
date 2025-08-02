@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+body {
+  overflow: hidden;
+}
+
+.containers {
+  width: 1595px;
+  margin: 0 auto;
+}
+
+.loading-img {
+  animation-name: LoadingImg;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-direction: alternate-reverse;
+  transform: all 0.3s;
+}
+
+@keyframes LoadingImg {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2) rotateY(360deg);
+  }
+}
+
+.active {
+  font-weight: bold;
+}

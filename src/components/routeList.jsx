@@ -8,9 +8,7 @@ import {
   Notifications,
   Profile,
 } from "../pages";
-
 import { PATH } from "./path";
-
 import {
   BookmarksIcon,
   ExploreIcon,
@@ -28,6 +26,7 @@ export const routeList = [
     path: PATH.main,
     title: "Home",
     icon: <HomeIcon />,
+    activeIcon: <HomeIcon active={true} />,
     element: <Home />,
     children: [],
   },
@@ -36,6 +35,7 @@ export const routeList = [
     path: PATH.explore,
     title: "Explore",
     icon: <ExploreIcon />,
+    activeIcon: <ExploreIcon active={true} />,
     element: <Explore />,
     children: [],
   },
@@ -44,6 +44,7 @@ export const routeList = [
     path: PATH.notification,
     title: "Notification",
     icon: <NotificationIcon />,
+    activeIcon: <NotificationIcon active={true} />,
     element: <Notifications />,
     children: [],
   },
@@ -52,6 +53,7 @@ export const routeList = [
     path: PATH.messages,
     title: "Messages",
     icon: <MessagesIcon />,
+    activeIcon: <MessagesIcon active={true} />,
     element: <Messages />,
     children: [],
   },
@@ -60,6 +62,7 @@ export const routeList = [
     path: PATH.bookmarks,
     title: "Bookmarks",
     icon: <BookmarksIcon />,
+    activeIcon: <BookmarksIcon active={true} />,
     element: <Bookmarks />,
     children: [],
   },
@@ -68,6 +71,7 @@ export const routeList = [
     path: PATH.lists,
     title: "Lists",
     icon: <ListIcon />,
+    activeIcon: <ListIcon active={true} />,
     element: <Lists />,
     children: [],
   },
@@ -76,6 +80,7 @@ export const routeList = [
     path: PATH.profile,
     title: "Profile",
     icon: <ProfileIcon />,
+    activeIcon: <ProfileIcon active={true} />,
     element: <Profile />,
     children: [],
   },
@@ -84,6 +89,7 @@ export const routeList = [
     path: PATH.more,
     title: "More",
     icon: <MoreIcon />,
+    activeIcon: <MoreIcon active={true} />,
     element: <More />,
     children: [],
   },

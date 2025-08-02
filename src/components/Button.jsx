@@ -1,9 +1,10 @@
-import React from "react";
-
-const Button = ({ title }) => {
+const Button = ({ children, classList, type }) => {
   return (
-    <button className="w-[450px] h-[60px] bg-[#1DA1F2] rounded-[76px] text-[18px] text-white cursor-pointer">
-      {title}
+    <button
+      type={type}
+      className={`w-[450px] h-[60px] bg-[#1DA1F2] rounded-[76px] text-[18px] text-white cursor-pointer ${classList}`}
+    >
+      {children}
     </button>
   );
 };

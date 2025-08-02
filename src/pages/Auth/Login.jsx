@@ -1,9 +1,30 @@
-import { TwitterIcon } from "../../assets/images";
-import { Button, Heading, Input, Text as AppText } from "../../components";
-
-const users = [{ username: "abdulloh", password: "123" }];
+import { useState } from "react";
+import { Loading, TwitterIcon } from "../../assets/images";
+import {
+  Button,
+  Heading,
+  Input,
+  Text as AppText,
+  PageLoading,
+} from "../../components";
+import { useCookies } from "react-cookie";
 
 const Login = () => {
+  const [_cookies, setCookies] = useCookies(["token"]);
+  const [loading, setLoading] = useState(false);
+
+  function handleLogin(e) {
+    e.preventDefault();
+    setLoading(true);
+    const data = {
+      email: e.target.email.value,
+      password: e.target.password.value,
+    };
+    setTimeout(() => {
+      setCookies("token", data);
+    }, 1000);
+  }
+
   return (
     <>
       <div className="flex justify-center mt-[60px] w-[450px] mx-auto">
@@ -20,13 +41,13 @@ const Login = () => {
             type={"h1"}
             title={"Log in to Twitter"}
           />
-          <form>
+          <form onSubmit={handleLogin}>
             <div className="space-y-[25px] mb-[25px]">
               <Input
                 id="login-username"
                 type="text"
                 placeholder="Phone number, email address"
-                name="username"
+                name="email"
                 required
                 autoComplete="off"
               />
@@ -39,7 +60,19 @@ const Login = () => {
                 autoComplete="off"
               />
             </div>
-            <Button title="Log In" type="submit" />
+            <Button>
+              {loading ? (
+                <img
+                  className="mx-auto scale-[2]"
+                  src={Loading}
+                  alt="Loading..."
+                  width={25}
+                  height={25}
+                />
+              ) : (
+                "Log In"
+              )}
+            </Button>
           </form>
           <div className="flex justify-between mt-[40px]">
             <a className="text-[#1DA1F2]" href="/">
