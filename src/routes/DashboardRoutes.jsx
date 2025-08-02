@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { routeList } from "../components";
-import { Navbar, Sitebar } from "../modules";
+import { Navbar, Sidebar } from "../modules";
 
 const DashboardRoutes = () => {
   return (
@@ -14,7 +14,7 @@ const DashboardRoutes = () => {
             ))}
           </Routes>
         </div>
-        <Sitebar />
+        <Sidebar />
       </div>
     </>
   );
