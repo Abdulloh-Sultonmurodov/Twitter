@@ -130,4 +130,3 @@ export const RouteList = [
     children: [],
   },
 ];
-export default RouteList;

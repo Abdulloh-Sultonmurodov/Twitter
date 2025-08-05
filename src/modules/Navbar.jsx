@@ -1,6 +1,6 @@
 import { TwitterIcon } from "../assets/images";
 import { useState } from "react";
-import { Button, Logout, NavItem, RoutesList } from "../components";
+import { Button, Logout, NavItem, RouteList } from "../components";
 
 const Navbar = () => {
   const [activeNav, setActiveNav] = useState("/");
@@ -15,7 +15,7 @@ const Navbar = () => {
         height={33}
       />
       <nav className="flex flex-col gap-[32px]">
-        {RoutesList.map((item) => (
+        {RouteList.map((item) => (
           <NavItem
             key={item.id}
             setActiveNav={setActiveNav}

@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { RoutesList } from "../components";
+import { RouteList } from "../components";
 import { Navbar, Sidebar } from "../modules";
 
 const DashboardRoutes = () => {
@@ -9,7 +9,7 @@ const DashboardRoutes = () => {
         <Navbar />
         <div className="w-[910px] relative h-[100vh] overflow-y-auto border-x-[1px] border-[#D8D8D8]">
           <Routes>
-            {RoutesList.map((item) => (
+            {RouteList.map((item) => (
               <Route key={item.id} path={item.path} element={item.element} />
             ))}
           </Routes>

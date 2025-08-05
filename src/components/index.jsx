@@ -6,7 +6,7 @@ import PageLoading from "./PageLoading";
 import NavItem from "./NavItem";
 import Logout from "./Logout";
 import { PATH } from "./path";
-import RoutesList from "./RouteList";
+import { RouteList } from "./routeList";
 
 export {
   Heading,
@@ -17,5 +17,5 @@ export {
   NavItem,
   Logout,
   PATH,
-  RoutesList,
+  RouteList,
 };
