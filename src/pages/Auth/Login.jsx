@@ -1,12 +1,6 @@
 import { useState } from "react";
 import { Loading, TwitterIcon } from "../../assets/images";
-import {
-  Button,
-  Heading,
-  Input,
-  Text as AppText,
-  PageLoading,
-} from "../../components";
+import { Button, Heading, Input, Text as AppText } from "../../components";
 import { useCookies } from "react-cookie";
 
 const Login = () => {

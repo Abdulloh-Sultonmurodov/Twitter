@@ -1,12 +1,12 @@
 import { TwitterIcon } from "../assets/images";
 import { useState } from "react";
-import { Button, NavItem, routeList } from "../components";
+import { Button, Logout, NavItem, RoutesList } from "../components";
 
 const Navbar = () => {
   const [activeNav, setActiveNav] = useState("/");
 
   return (
-    <div className="w-[283px] h-[100vh] overflow-y-auto pt-[31px] pr-[15px]">
+    <div className="w-[283px] relative h-[100vh] overflow-y-auto pt-[31px] pr-[15px]">
       <img
         className="mb-[49px]"
         src={TwitterIcon}
@@ -15,7 +15,7 @@ const Navbar = () => {
         height={33}
       />
       <nav className="flex flex-col gap-[32px]">
-        {routeList.map((item) => (
+        {RoutesList.map((item) => (
           <NavItem
             key={item.id}
             setActiveNav={setActiveNav}
@@ -25,6 +25,7 @@ const Navbar = () => {
         ))}
       </nav>
       <Button classList={`!py-[15px] !w-[230px] mt-[30px]`}>Tweet</Button>
+      <Logout />
     </div>
   );
 };

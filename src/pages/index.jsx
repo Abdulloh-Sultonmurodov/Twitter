@@ -1,17 +1,68 @@
 import { lazy } from "react";
-import Home from "./Dashboard/Home";
-import Explore from "./Dashboard/Explore";
-import Notifications from "./Dashboard/Notifications";
-import Messages from "./Dashboard/Messages";
-import Bookmarks from "./Dashboard/Bookmarks";
-import Lists from "./Dashboard/Lists";
-import Profile from "./Dashboard/Profile";
-import More from "./Dashboard/More";
 
 const Login = lazy(
   () =>
     new Promise((resolve) => {
       return setTimeout(() => resolve(import("./Auth/Login")), 2000);
+    })
+);
+
+const Home = lazy(
+  () =>
+    new Promise((resolve) => {
+      return setTimeout(() => resolve(import("./Dashboard/Home")), 1000);
+    })
+);
+
+const Explore = lazy(
+  () =>
+    new Promise((resolve) => {
+      return setTimeout(() => resolve(import("./Dashboard/Explore")), 1000);
+    })
+);
+
+const Notifications = lazy(
+  () =>
+    new Promise((resolve) => {
+      return setTimeout(
+        () => resolve(import("./Dashboard/Notifications")),
+        1000
+      );
+    })
+);
+
+const Messages = lazy(
+  () =>
+    new Promise((resolve) => {
+      return setTimeout(() => resolve(import("./Dashboard/Messages")), 1000);
+    })
+);
+
+const Bookmarks = lazy(
+  () =>
+    new Promise((resolve) => {
+      return setTimeout(() => resolve(import("./Dashboard/Bookmarks")), 1000);
+    })
+);
+
+const Lists = lazy(
+  () =>
+    new Promise((resolve) => {
+      return setTimeout(() => resolve(import("./Dashboard/Lists")), 1000);
+    })
+);
+
+const Profile = lazy(
+  () =>
+    new Promise((resolve) => {
+      return setTimeout(() => resolve(import("./Dashboard/Profile")), 1000);
+    })
+);
+
+const More = lazy(
+  () =>
+    new Promise((resolve) => {
+      return setTimeout(() => resolve(import("./Dashboard/More")), 1000);
     })
 );
 

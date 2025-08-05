@@ -1,3 +1,5 @@
+import { PATH } from "./path";
+
 import {
   Bookmarks,
   Explore,
@@ -8,7 +10,7 @@ import {
   Notifications,
   Profile,
 } from "../pages";
-import { PATH } from "./path";
+
 import {
   BookmarksIcon,
   ExploreIcon,
@@ -19,15 +21,21 @@ import {
   NotificationIcon,
   ProfileIcon,
 } from "../assets/icons";
+import { Suspense } from "react";
+import PageLoading from "./PageLoading";
 
-export const routeList = [
+export const RouteList = [
   {
     id: 1,
     path: PATH.main,
     title: "Home",
     icon: <HomeIcon />,
     activeIcon: <HomeIcon active={true} />,
-    element: <Home />,
+    element: (
+      <Suspense fallback={<PageLoading isLoading={true} />}>
+        <Home />
+      </Suspense>
+    ),
     children: [],
   },
   {
@@ -36,7 +44,11 @@ export const routeList = [
     title: "Explore",
     icon: <ExploreIcon />,
     activeIcon: <ExploreIcon active={true} />,
-    element: <Explore />,
+    element: (
+      <Suspense fallback={<PageLoading isLoading={true} />}>
+        <Explore />
+      </Suspense>
+    ),
     children: [],
   },
   {
@@ -45,7 +57,11 @@ export const routeList = [
     title: "Notification",
     icon: <NotificationIcon />,
     activeIcon: <NotificationIcon active={true} />,
-    element: <Notifications />,
+    element: (
+      <Suspense fallback={<PageLoading isLoading={true} />}>
+        <Notifications />
+      </Suspense>
+    ),
     children: [],
   },
   {
@@ -54,7 +70,11 @@ export const routeList = [
     title: "Messages",
     icon: <MessagesIcon />,
     activeIcon: <MessagesIcon active={true} />,
-    element: <Messages />,
+    element: (
+      <Suspense fallback={<PageLoading isLoading={true} />}>
+        <Messages />
+      </Suspense>
+    ),
     children: [],
   },
   {
@@ -63,7 +83,11 @@ export const routeList = [
     title: "Bookmarks",
     icon: <BookmarksIcon />,
     activeIcon: <BookmarksIcon active={true} />,
-    element: <Bookmarks />,
+    element: (
+      <Suspense fallback={<PageLoading isLoading={true} />}>
+        <Bookmarks />
+      </Suspense>
+    ),
     children: [],
   },
   {
@@ -72,7 +96,11 @@ export const routeList = [
     title: "Lists",
     icon: <ListIcon />,
     activeIcon: <ListIcon active={true} />,
-    element: <Lists />,
+    element: (
+      <Suspense fallback={<PageLoading isLoading={true} />}>
+        <Lists />
+      </Suspense>
+    ),
     children: [],
   },
   {
@@ -81,7 +109,11 @@ export const routeList = [
     title: "Profile",
     icon: <ProfileIcon />,
     activeIcon: <ProfileIcon active={true} />,
-    element: <Profile />,
+    element: (
+      <Suspense fallback={<PageLoading isLoading={true} />}>
+        <Profile />
+      </Suspense>
+    ),
     children: [],
   },
   {
@@ -90,7 +122,12 @@ export const routeList = [
     title: "More",
     icon: <MoreIcon />,
     activeIcon: <MoreIcon active={true} />,
-    element: <More />,
+    element: (
+      <Suspense fallback={<PageLoading isLoading={true} />}>
+        <More />
+      </Suspense>
+    ),
     children: [],
   },
 ];
+export default RouteList;
